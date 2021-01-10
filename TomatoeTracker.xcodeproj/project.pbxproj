@@ -11,7 +11,9 @@
 		8A2792E125A6916600D50C70 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A2792E025A6916600D50C70 /* ContentView.swift */; };
 		8A2792E325A6917200D50C70 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8A2792E225A6917200D50C70 /* Assets.xcassets */; };
 		8A2792E625A6917200D50C70 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8A2792E525A6917200D50C70 /* Preview Assets.xcassets */; };
+		8A3ED90F25AAB5A70099575A /* TomatoeSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A3ED90E25AAB5A70099575A /* TomatoeSettings.swift */; };
 		8A99EC8325A69221005D5EAD /* CircularTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A99EC8225A69221005D5EAD /* CircularTimer.swift */; };
+		8A99EC8725A69BD6005D5EAD /* InnerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A99EC8625A69BD6005D5EAD /* InnerView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,7 +24,9 @@
 		8A2792E525A6917200D50C70 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		8A2792E725A6917200D50C70 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8A2792E825A6917200D50C70 /* TomatoeTracker.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TomatoeTracker.entitlements; sourceTree = "<group>"; };
+		8A3ED90E25AAB5A70099575A /* TomatoeSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TomatoeSettings.swift; sourceTree = "<group>"; };
 		8A99EC8225A69221005D5EAD /* CircularTimer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularTimer.swift; sourceTree = "<group>"; };
+		8A99EC8625A69BD6005D5EAD /* InnerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InnerView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +66,8 @@
 				8A2792E825A6917200D50C70 /* TomatoeTracker.entitlements */,
 				8A2792E425A6917200D50C70 /* Preview Content */,
 				8A99EC8225A69221005D5EAD /* CircularTimer.swift */,
+				8A99EC8625A69BD6005D5EAD /* InnerView.swift */,
+				8A3ED90E25AAB5A70099575A /* TomatoeSettings.swift */,
 			);
 			path = TomatoeTracker;
 			sourceTree = "<group>";
@@ -144,7 +150,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				8A2792E125A6916600D50C70 /* ContentView.swift in Sources */,
+				8A99EC8725A69BD6005D5EAD /* InnerView.swift in Sources */,
 				8A99EC8325A69221005D5EAD /* CircularTimer.swift in Sources */,
+				8A3ED90F25AAB5A70099575A /* TomatoeSettings.swift in Sources */,
 				8A2792DF25A6916600D50C70 /* TomatoeTrackerApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -203,6 +211,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
 				MACOSX_DEPLOYMENT_TARGET = 11.1;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -258,6 +267,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
 				MACOSX_DEPLOYMENT_TARGET = 11.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
@@ -287,7 +297,9 @@
 				MACOSX_DEPLOYMENT_TARGET = 11.0;
 				PRODUCT_BUNDLE_IDENTIFIER = Gonche.TomatoeTracker;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2,6";
 			};
 			name = Debug;
 		};
@@ -311,7 +323,9 @@
 				MACOSX_DEPLOYMENT_TARGET = 11.0;
 				PRODUCT_BUNDLE_IDENTIFIER = Gonche.TomatoeTracker;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2,6";
 			};
 			name = Release;
 		};

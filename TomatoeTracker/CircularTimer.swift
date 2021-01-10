@@ -8,8 +8,9 @@
 import SwiftUI
 
 struct CircularTimer: View {
-    
-    var fractionFull: Double = 0.5
+
+    var total:Int = 100
+    var left:Int = 40
     var lineColor:Color = .green
     
     var body: some View {
@@ -21,7 +22,12 @@ struct CircularTimer: View {
                 .trim(from: 0, to: CGFloat(fractionFull))
                 .stroke(style:innerCircleStyle )
         }
-        .frame(width: 250, height: 250)
+        //.frame(width: 250, height: 250)
+        .rotationEffect(.init(degrees: -90.0))
+    }
+    
+    var fractionFull:Double{
+        Double(left)/Double(total)
     }
     
     var isCompleted:Bool{
@@ -33,17 +39,20 @@ struct CircularTimer: View {
     }
 }
 
+//MARK: - Preview
 struct CircularTimer_Previews: PreviewProvider {
     static var previews: some View {
         Group{
             CircularTimer()
-                .padding()
+                
                 .colorScheme(.dark)
             
             CircularTimer()
                 .padding()
                 .colorScheme(.light)
         }
+        .padding()
+        .frame(width: 250, height: 250)
         
     }
 }
