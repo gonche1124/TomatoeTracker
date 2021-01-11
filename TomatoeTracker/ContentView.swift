@@ -7,8 +7,11 @@
 
 import SwiftUI
 
-enum AppState{
+//TODO: Move to own file
+enum AppState:String, CaseIterable, Identifiable{
     case play, pause, stop, done
+    
+    var id:String{rawValue}
 }
 
 struct ContentView: View {

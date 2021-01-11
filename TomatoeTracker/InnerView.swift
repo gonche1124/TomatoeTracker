@@ -12,12 +12,13 @@ struct InnerView: View {
     @Binding var timeLeft:Int
     
     var body: some View {
-        VStack {
+        VStack(spacing:0) {
             Text(timeAsString)
                 .font(customFont)
                 .minimumScaleFactor(0.45)
                 .lineLimit(1)
-            Text("Play /Pause")
+            ControlsRow()
+                //.padding()
         }
     }
     
@@ -35,5 +36,6 @@ struct InnerView: View {
 struct InnerView_Previews: PreviewProvider {
     static var previews: some View {
         InnerView(timeLeft: .constant(23))
+            .frame(width: 400)
     }
 }

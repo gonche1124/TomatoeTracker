@@ -12,6 +12,7 @@
 		8A2792E325A6917200D50C70 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8A2792E225A6917200D50C70 /* Assets.xcassets */; };
 		8A2792E625A6917200D50C70 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8A2792E525A6917200D50C70 /* Preview Assets.xcassets */; };
 		8A3ED90F25AAB5A70099575A /* TomatoeSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A3ED90E25AAB5A70099575A /* TomatoeSettings.swift */; };
+		8A7798A125ABCAA00028FFAB /* ControlsRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A7798A025ABCAA00028FFAB /* ControlsRow.swift */; };
 		8A99EC8325A69221005D5EAD /* CircularTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A99EC8225A69221005D5EAD /* CircularTimer.swift */; };
 		8A99EC8725A69BD6005D5EAD /* InnerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A99EC8625A69BD6005D5EAD /* InnerView.swift */; };
 /* End PBXBuildFile section */
@@ -25,6 +26,7 @@
 		8A2792E725A6917200D50C70 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8A2792E825A6917200D50C70 /* TomatoeTracker.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TomatoeTracker.entitlements; sourceTree = "<group>"; };
 		8A3ED90E25AAB5A70099575A /* TomatoeSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TomatoeSettings.swift; sourceTree = "<group>"; };
+		8A7798A025ABCAA00028FFAB /* ControlsRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControlsRow.swift; sourceTree = "<group>"; };
 		8A99EC8225A69221005D5EAD /* CircularTimer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularTimer.swift; sourceTree = "<group>"; };
 		8A99EC8625A69BD6005D5EAD /* InnerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InnerView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -68,6 +70,7 @@
 				8A99EC8225A69221005D5EAD /* CircularTimer.swift */,
 				8A99EC8625A69BD6005D5EAD /* InnerView.swift */,
 				8A3ED90E25AAB5A70099575A /* TomatoeSettings.swift */,
+				8A7798A025ABCAA00028FFAB /* ControlsRow.swift */,
 			);
 			path = TomatoeTracker;
 			sourceTree = "<group>";
@@ -149,6 +152,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8A7798A125ABCAA00028FFAB /* ControlsRow.swift in Sources */,
 				8A2792E125A6916600D50C70 /* ContentView.swift in Sources */,
 				8A99EC8725A69BD6005D5EAD /* InnerView.swift in Sources */,
 				8A99EC8325A69221005D5EAD /* CircularTimer.swift in Sources */,
