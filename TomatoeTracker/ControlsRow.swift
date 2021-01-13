@@ -9,10 +9,12 @@ import SwiftUI
 
 struct ControlsRow: View {
     
-    @State var currentState:AppState = AppState.play
+    //@State var currentState:AppState = AppState.play
+    @AppStorage("status") var currentState: AppState = .stop
     
     var body: some View {
-        VStack {
+        Group {
+            
             switch currentState {
             case .play:
                 HStack(spacing:20){
@@ -20,7 +22,9 @@ struct ControlsRow: View {
                     stopButton
                 }
             case .stop, .done:
-                playButton
+                HStack {
+                    playButton
+                }
             case .pause:
                 HStack(spacing:20){
                     playButton
@@ -29,7 +33,10 @@ struct ControlsRow: View {
             }
         }
         .buttonStyle(PlainButtonStyle())
-        .aspectRatio(contentMode: .fit)
+        .frame(maxHeight:100)
+        //.aspectRatio(contentMode: .fit)
+        
+        
         //.frame(width: .infinity, height: .infinity)
         
     }
@@ -41,6 +48,7 @@ struct ControlsRow: View {
                 Image(systemName: "play.fill")
                     .resizable()
                     .aspectRatio(contentMode: .fit)
+                    //.frame(maxHeight:100)
                })
             
     }
@@ -51,6 +59,7 @@ struct ControlsRow: View {
                 Image(systemName: "stop.fill")
                     .resizable()
                     .aspectRatio(contentMode: .fit)
+                    //.frame(maxHeight:100)
                })
     }
     
@@ -59,6 +68,7 @@ struct ControlsRow: View {
             Image(systemName: "pause.fill")
                 .resizable()
                 .aspectRatio(contentMode: .fit)
+                //.frame(maxHeight:100)
         })
     }
     
@@ -70,9 +80,10 @@ struct ControlsRow_Previews: PreviewProvider {
         Group {
             ForEach(AppState.allCases){ state in
                 ControlsRow(currentState: state)
+                    .padding()
                     .previewDisplayName(state.rawValue)
             }
         }
-        .frame(width: 200)
+        //.frame(width: 400)
     }
 }

@@ -12,18 +12,31 @@ struct InnerView: View {
     @Binding var timeLeft:Int
     
     var body: some View {
-        VStack(spacing:0) {
-            Text(timeAsString)
-                .font(customFont)
-                .minimumScaleFactor(0.45)
-                .lineLimit(1)
-            ControlsRow()
-                //.padding()
+        GeometryReader { geo in
+            VStack(spacing:0) {
+                Text(timeAsString)
+                    .font(customFont)
+                    .minimumScaleFactor(0.05)
+                    .lineLimit(1)
+                    .layoutPriority(1)
+                    //.frame(height:geo.size.height*2/3)
+                ControlsRow()
+                    .padding(.horizontal)
+                    //.aspectRatio(contentMode: .fit)
+                    //.frame(height: 120)
+                    .frame(height:geo.size.height/3)
+                    //.frame(height:geo.size.width)
+                    //.padding()
+            }
+            .frame(maxHeight:.infinity)
+            .frame(maxWidth:.infinity)
+            
         }
     }
     
     var customFont:Font{
-        .system(size: 75, weight: .light, design: .rounded)
+        .system(size: 100, weight: .semibold, design: .monospaced)
+        //.system(size: 100, weight: .light, design: .rounded)
     }
     
     var timeAsString:String{

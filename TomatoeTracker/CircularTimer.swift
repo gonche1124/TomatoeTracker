@@ -22,7 +22,6 @@ struct CircularTimer: View {
                 .trim(from: 0, to: CGFloat(fractionFull))
                 .stroke(style:innerCircleStyle )
         }
-        //.frame(width: 250, height: 250)
         .rotationEffect(.init(degrees: -90.0))
     }
     
@@ -44,7 +43,6 @@ struct CircularTimer_Previews: PreviewProvider {
     static var previews: some View {
         Group{
             CircularTimer()
-                
                 .colorScheme(.dark)
             
             CircularTimer()
