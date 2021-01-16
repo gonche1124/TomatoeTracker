@@ -29,16 +29,17 @@ struct ContentView: View {
     
     var body: some View {
         //NavigationView {
-            VStack {
+        VStack(spacing: 5) {
                 Text("Example: \(status.rawValue)")
                 TomatoeSettings()
                 settingsButton
-                timeSegment
+                TimeSegment()
+                    .padding(.horizontal)
                 timerDisplay
             }
             .onChange(of: totalTime){ newTotal in
                     timeLeft = newTotal
-                status = .done
+                    status = .done
             }
             .onChange(of: status){ status in
                 if status == .stop {
@@ -86,18 +87,6 @@ struct ContentView: View {
        
     }
     
-    var timeSegment: some View{
-        Picker("Time", selection:$totalTime){
-            Text("1/2").tag(30)
-            Text("5").tag(5*60)
-            Text("10").tag(10*60)
-            Text("15").tag(15*60)
-            Text("25").tag(25*60)
-        }
-        .pickerStyle(SegmentedPickerStyle())
-        .padding()
-        .labelsHidden()
-    }
 }
 
 //MARK: - Preview

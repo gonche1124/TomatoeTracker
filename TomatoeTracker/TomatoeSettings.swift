@@ -12,27 +12,49 @@ import UserNotifications
 struct TomatoeSettings: View {
     
     @State private var enabledNoti:Bool = false
+    @State private var doNotDisturb:Bool = false
+    @State private var soundWhenDone:Bool = false
     
     @AppStorage("status") var status: AppState = .stop
     
     var body: some View {
         VStack{
             Text("Cycle through")
-            Text("Do not disturb")
-            Text("Notification")
+            
+            Toggle(isOn: $doNotDisturb){
+                Text("Do not disturb")
+            }
+            
             Toggle(isOn: $enabledNoti){
                 Text("Send Notification")
             }
-            Text("Sound when done")
+            .onChange(of: enabledNoti) { newValue in
+                if newValue {
+                    requestAuthorization()
+                }
+            }
+            
+            Toggle(isOn: $soundWhenDone){
+                Text("Sound when done?")
+            }
+            if soundWhenDone {
+                Picker(selection: .constant(1), label: Text("Picker"), content: {
+                    
+                    ForEach((1...10), id:\.self) { num in
+                        Text("\(num)").tag(num)
+                    }
+                  
+                })
+            }
+            
+            
+            
             Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/, label: {
                 /*@START_MENU_TOKEN@*/Text("Button")/*@END_MENU_TOKEN@*/
             })
         }
-        .onChange(of: enabledNoti) { newValue in
-            if newValue {
-                requestAuthorization()
-            }
-        }
+        
+        
         
         .onChange(of: status){ newStatus in
             if newStatus == .done {

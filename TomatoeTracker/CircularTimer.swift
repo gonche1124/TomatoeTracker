@@ -16,11 +16,11 @@ struct CircularTimer: View {
     var body: some View {
         ZStack{
             Circle()
-                .stroke(Color.gray, lineWidth: 15)
+                .stroke(Color("CircleBack"), lineWidth: 15)
                
             Circle()
                 .trim(from: 0, to: CGFloat(fractionFull))
-                .stroke(style:innerCircleStyle )
+                .stroke(Color("CircleFront"), style:innerCircleStyle )
         }
         .rotationEffect(.init(degrees: -90.0))
     }
